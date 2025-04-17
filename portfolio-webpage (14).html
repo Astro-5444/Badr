@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Badr K. Al-Sabri | E-Portfolio</title>
+
+  <!-- Google Fonts: Montserrat -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/kMTsCH2PYyI+P0KMfT9HI0IVUQ+SJa7Bl2S6oI74rO5gwNR3I2TrpHAg3zBUcQ0T1MO1fWzEIdKQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /************************************************
+     * GLOBAL STYLES
+     ************************************************/
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    header {
+      background-color: #002E5D; /* Deep navy/blue */
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+
+    nav {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0.5rem 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      margin: 0.5rem 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #002E5D;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 2rem auto;
+      background-color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      border-radius: 4px;
+    }
+
+    .section-title {
+      margin-top: 0;
+      color: #002E5D;
+      border-left: 4px solid #002E5D;
+      padding-left: 0.5rem;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    /************************************************
+     * INTRO SECTION
+     ************************************************/
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .intro .profile-pic {
+      width: 120px;
+      height: 120px;
+      background-color: #ccc;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      /* Replace with actual image if desired:
+         background: url('your-photo.jpg') center/cover no-repeat; */
+    }
+
+    .intro h2 {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .intro p {
+      max-width: 700px;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    .intro .social-links {
+      margin-top: 1rem;
+    }
+
+    .intro .social-links a {
+      margin: 0 0.5rem;
+      color: #333;
+    }
+
+    .intro .resume-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #002E5D;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .intro .resume-btn:hover {
+      background-color: #004b9b;
+    }
+
+    /************************************************
+     * EXPERIENCE & EDUCATION TIMELINE
+     ************************************************/
+    .timeline-section .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding: 0;
+    }
+
+    .timeline-section .timeline::before {
+      content: "";
+      position: absolute;
+      left: 30px; /* Adjust horizontal positioning as desired */
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: #002E5D; /* Timeline line color */
+    }
+
+    .timeline-section .timeline-item {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 70px; /* Ensures content doesn't overlap the line */
+    }
+
+    .timeline-section .timeline-item .timeline-icon {
+      width: 20px;
+      height: 20px;
+      background: #FF5C39; /* Circle color */
+      border-radius: 50%;
+      position: absolute;
+      left: 22px; /* Should align with the vertical line */
+      top: 0;
+    }
+
+    .timeline-section .timeline-item .timeline-content {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .timeline-section .timeline-item .timeline-content h3 {
+      margin: 0 0 0.5rem;
+      color: #002E5D;
+      font-size: 1.1rem;
+    }
+
+    .timeline-section .timeline-item .timeline-content p {
+      margin: 0.2rem 0 1rem;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .timeline-section .timeline-item .timeline-content ul {
+      margin: 0.5rem 0;
+      padding-left: 1.2rem;
+      list-style-type: disc;
+    }
+
+    /************************************************
+     * PROJECTS, CERTIFICATES, REFERENCES
+     ************************************************/
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .portfolio-item {
+      background-color: #f9f9f9;
+      border-left: 4px solid #ccc;
+      padding: 1rem;
+      border-radius: 4px;
+    }
+
+    .portfolio-item h4 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: #002E5D;
+    }
+
+    .portfolio-item p {
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    /************************************************
+     * SWOT ANALYSIS
+     ************************************************/
+    .swot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .swot-item {
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border-left: 4px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .swot-item h4 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: #002E5D;
+    }
+
+    /************************************************
+     * PO ATTAINMENT TABLE
+     ************************************************/
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    table thead {
+      background-color: #002E5D;
+      color: #fff;
+    }
+
+    table th, table td {
+      text-align: left;
+      padding: 0.75rem;
+      border-bottom: 1px solid #ddd;
+      font-size: 0.95rem;
+    }
+
+    /************************************************
+     * CONCLUSION & CONTACT
+     ************************************************/
+    .conclusion {
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    .contact-info i {
+      color: #002E5D;
+      margin-right: 5px;
+    }
+
+    footer {
+      text-align: center;
+      color: #666;
+      font-size: 0.85rem;
+      margin: 2rem 0 1rem 0;
+    }
+
+    /************************************************
+     * RESPONSIVE
+     ************************************************/
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+      .timeline-section .timeline::before {
+        left: 20px;
+      }
+      .timeline-section .timeline-item {
+        padding-left: 60px;
+      }
+      .timeline-section .timeline-item .timeline-icon {
+        left: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>E-Portfolio | Mechatronic Engineering Student</h1>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#introduction">Introduction</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#references">References</a>
+    <a href="#swot">SWOT Analysis</a>
+    <a href="#po-eval">PO Attainment</a>
+    <a href="#conclusion">Conclusion</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- INTRODUCTION SECTION -->
+  <section id="introduction" class="container">
+    <div class="section-title">Self-Introduction</div>
+    <div class="intro">
+      <div class="profile-pic"></div>
+      <h2>Hi, I’m <strong style="color:#002E5D;">Badr Khaled Qasem Al-Sabri</strong></h2>
+      <p>
+        I am a Mechatronic Engineering student at Asia Pacific University, Malaysia, 
+        with hands-on experience in embedded systems, robotics, and automation. 
+        I’ve contributed to various innovative projects—from remote-controlled sterilization 
+        robots to DC-DC converters for electric vehicles—demonstrating my passion for integrating 
+        software, electronics, and mechanical design.
+        <br><br>
+        Expected to graduate by mid-2025, I hold skills in Arduino, Raspberry Pi, Python, 
+        MATLAB, Simulink, SolidWorks (CSWA), and more. Through continuous collaboration, 
+        research, and creativity, I aspire to drive engineering solutions that address 
+        modern industry demands.
+      </p>
+
+      <!-- Social Icons -->
+      <div class="social-links">
+        <a href="mailto:eaglebadr7@gmail.com" target="_blank" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/badr-khaled-al-sabri-38b508208" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+
+      <!-- Resume Link -->
+      <a class="resume-btn"
+         href="Badr_Khaled_Qasem_Al-Sabri_Resume.pdf"
+         target="_blank">
+        <i class="fas fa-file"></i> Download My Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE & EDUCATION TIMELINE SECTION -->
+  <section id="experience" class="container timeline-section">
+    <div class="section-title">Experience &amp; Education</div>
+
+    <div class="timeline">
+      <!-- 1: Robotic and Coding R&D Trainee & Instructor -->
+      <div class="timeline-item">
+        <div class="timeline-icon"></div>
+        <div class="timeline-content">
+          <h3>Robotic and Coding R&D Trainee &amp; Instructor</h3>
+          <p><strong>My-Robot Sdn Bhd</strong> – Johor, Malaysia | Feb 2024 – Jun 2024</p>
+          <ul>
+            <li>Assisted in development of autonomous robots using Arduino and Python</li>
+            <li>Conducted research and training sessions on embedded systems and programming</li>
+            <li>Prototyped and tested hardware circuits for robotic kits and educational platforms</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2: Founder - Falah Academy -->
+      <div class="timeline-item">
+        <div class="timeline-icon"></div>
+        <div class="timeline-content">
+          <h3>Founder - Falah Academy</h3>
+          <p><strong>Freelance | Remote</strong> | Jan 2022 – Present</p>
+          <ul>
+            <li>Planned and executed personalized online English lessons for students aged 10–20, 
+                leading to a 95% improvement in language skills</li>
+            <li>Facilitated engaging virtual classroom environments using digital tools, 
+                increasing student participation and engagement by 90%</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 3: Auto Parts Clerk -->
+      <div class="timeline-item">
+        <div class="timeline-icon"></div>
+        <div class="timeline-content">
+          <h3>Auto Parts Clerk</h3>
+          <p><strong>Jeddah, Saudi Arabia</strong> | Mar 2021 – Jul 2021</p>
+          <ul>
+            <li>Assisted with parts inventory, technical info, and customer requests 
+                in the spare parts shop</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 4: Education - Bachelor of Mechatronic Engineering -->
+      <div class="timeline-item">
+        <div class="timeline-icon" style="background-color: #0a6dba;"></div>
+        <div class="timeline-content">
+          <h3>Bachelor of Engineering in Mechatronic Engineering (Hons)</h3>
+          <p>
+            <strong>Asia Pacific University of Technology &amp; Innovation (APU)</strong> – 
+            Kuala Lumpur, Malaysia<br>
+            Mar 2021 – Expected Graduation: Mid-2025
+          </p>
+          <ul>
+            <li>Focus on Robotics, Automation, Circuit Design, and Embedded Systems</li>
+            <li>GPA: [Insert current GPA or relevant achievements here]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="container">
+    <div class="section-title">Highlighted Projects</div>
+    <p>
+      Here are some standout academic and personal projects demonstrating my skill set 
+      in robotics, automation, circuit design, and embedded systems.
+    </p>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <h4>Remote-Controlled UV Sterilization Robot</h4>
+        <p>
+          <strong>Tools:</strong> Raspberry Pi 4B, Python, GUI Development<br>
+          <strong>Description:</strong> Designed and integrated movement, power, and 
+          safety subsystems to enable hospital-grade disinfection.
+        </p>
+      </div>
+      <div class="portfolio-item">
+        <h4>Object-Follower Robot with ROS2</h4>
+        <p>
+          <strong>Tools:</strong> TurtleBot3, ROS2, Gazebo<br>
+          <strong>Description:</strong> Implemented dynamic object-following, 
+          integrating SLAM, navigation, and teleoperation in a 2D/3D simulation.
+        </p>
+      </div>
+      <div class="portfolio-item">
+        <h4>IC Dimension Measurement (Computer Vision)</h4>
+        <p>
+          <strong>Tools:</strong> Python, OpenCV<br>
+          <strong>Description:</strong> Created a measurement system for 
+          integrated circuits using reference objects and basic CNN enhancements.
+        </p>
+      </div>
+      <div class="portfolio-item">
+        <h4>DC-DC Converter for EV Drive</h4>
+        <p>
+          <strong>Tools:</strong> MATLAB, Simulink<br>
+          <strong>Description:</strong> Simulated buck converter 
+          for 200V DC motor with PID control, meeting IEC efficiency standards.
+        </p>
+      </div>
+      <!-- Add more items as desired -->
+    </div>
+  </section>
+
+  <!-- CERTIFICATES SECTION -->
+  <section id="certificates" class="container">
+    <div class="section-title">Certifications</div>
+    <p>List of relevant certifications and verified programs I’ve completed:</p>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <h4>CSWA – Mechanical Design</h4>
+        <p><strong>Issuer:</strong> Dassault Systèmes (Dec 2023)</p>
+      </div>
+      <div class="portfolio-item">
+        <h4>edX Verified Certificate – Introduction to Engineering Design</h4>
+        <p><strong>Date:</strong> Apr 2024</p>
+      </div>
+      <div class="portfolio-item">
+        <h4>McKinsey Forward Program</h4>
+        <p><strong>Issuer:</strong> McKinsey &amp; Company (Nov 2023)</p>
+      </div>
+      <div class="portfolio-item">
+        <h4>MATLAB Onramp &amp; Simulink Onramp</h4>
+        <p><strong>Issuer:</strong> MathWorks (Multiple Dates)</p>
+      </div>
+      <!-- Add more certificates if needed -->
+    </div>
+  </section>
+
+  <!-- REFERENCES SECTION -->
+  <section id="references" class="container">
+    <div class="section-title">References</div>
+    <p>
+      Professional references are available to attest to my skills, work ethic, and 
+      collaborative mindset. I have worked closely with academic supervisors and 
+      industry professionals during my internship and freelance teaching roles.
+    </p>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <h4>Academic Reference</h4>
+        <p>
+          <strong>Name:</strong> [Lecturer/Professor's Name]<br>
+          <strong>Position:</strong> [Title at Asia Pacific University]<br>
+          <strong>Contact:</strong> [Email/Phone, if permitted]
+        </p>
+      </div>
+      <div class="portfolio-item">
+        <h4>Professional Reference</h4>
+        <p>
+          <strong>Name:</strong> [Supervisor/Manager Name]<br>
+          <strong>Position:</strong> R&amp;D Manager at My-Robot Sdn Bhd<br>
+          <strong>Contact:</strong> [Email/Phone, if permitted]
+        </p>
+      </div>
+      <!-- Add or adjust references as desired -->
+    </div>
+  </section>
+
+  <!-- SWOT ANALYSIS SECTION -->
+  <section id="swot" class="container">
+    <div class="section-title">SWOT Analysis</div>
+    <p>
+      A concise assessment of my technical, personal, and collaborative skills 
+      to highlight areas of excellence and identify strategies for continuous growth.
+    </p>
+    <div class="swot-grid">
+      <div class="swot-item">
+        <h4>Strengths</h4>
+        <ul>
+          <li>Robotics &amp; embedded systems (Arduino, Raspberry Pi)</li>
+          <li>Strong design &amp; simulation (SolidWorks, LTSpice, MATLAB)</li>
+          <li>Leadership &amp; cross-cultural communication</li>
+        </ul>
+      </div>
+      <div class="swot-item">
+        <h4>Weaknesses</h4>
+        <ul>
+          <li>Need deeper AI/ML frameworks (TensorFlow, PyTorch)</li>
+          <li>Balancing academic workload &amp; self-study</li>
+        </ul>
+      </div>
+      <div class="swot-item">
+        <h4>Opportunities</h4>
+        <ul>
+          <li>Growing demand in Industry 4.0 &amp; robotics globally</li>
+          <li>Professional certifications for advanced mechatronics</li>
+          <li>Internship/co-op in electronics manufacturing</li>
+        </ul>
+      </div>
+      <div class="swot-item">
+        <h4>Threats</h4>
+        <ul>
+          <li>Rapid tech evolution requires continuous upskilling</li>
+          <li>Highly competitive job market</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PO ATTAINMENT & EVALUATION SECTION -->
+  <section id="po-eval" class="container">
+    <div class="section-title">PO Attainment &amp; Evaluation</div>
+    <p>
+      The table below shows my Program Outcomes (P01–P12) and corresponding 
+      attainment levels (on a 1.0 scale), followed by a short reflection 
+      on ways to improve my future performance.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>PO</th>
+          <th>Description</th>
+          <th>Attainment (1.0 Scale)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>P01</td>
+          <td>Engineering Knowledge</td>
+          <td>1.00</td>
+        </tr>
+        <tr>
+          <td>P02</td>
+          <td>Problem Analysis</td>
+          <td>0.57</td>
+        </tr>
+        <tr>
+          <td>P03</td>
+          <td>Design/Development</td>
+          <td>0.89</td>
+        </tr>
+        <tr>
+          <td>P04</td>
+          <td>Investigation</td>
+          <td>0.75</td>
+        </tr>
+        <tr>
+          <td>P05</td>
+          <td>Modern Tool Usage</td>
+          <td>0.80</td>
+        </tr>
+        <tr>
+          <td>P06</td>
+          <td>Engineer &amp; Society</td>
+          <td>1.00</td>
+        </tr>
+        <tr>
+          <td>P07</td>
+          <td>Environment &amp; Sustainability</td>
+          <td>1.00</td>
+        </tr>
+        <tr>
+          <td>P08</td>
+          <td>Ethics</td>
+          <td>1.00</td>
+        </tr>
+        <tr>
+          <td>P09</td>
+          <td>Individual &amp; Team Work</td>
+          <td>0.83</td>
+        </tr>
+        <tr>
+          <td>P10</td>
+          <td>Communication</td>
+          <td>1.00</td>
+        </tr>
+        <tr>
+          <td>P11</td>
+          <td>Project Management &amp; Finance</td>
+          <td>1.00</td>
+        </tr>
+        <tr>
+          <td>P12</td>
+          <td>Life-long Learning</td>
+          <td>1.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      <strong>Reflection &amp; Key Takeaways:</strong><br>
+      I excel in <em>Engineering Knowledge</em> (P01), <em>Ethics</em> (P08), 
+      and <em>Life-long Learning</em> (P12). However, I aim to improve in 
+      <em>Problem Analysis</em> (P02) by exposing myself to more complex real-world 
+      case studies and hands-on debugging scenarios. I plan to strengthen 
+      <em>Investigation</em> (P04) and <em>Modern Tool Usage</em> (P05) 
+      through advanced online courses, peer collaboration, and targeted internships 
+      in robotics or semiconductor manufacturing.
+    </p>
+  </section>
+
+  <!-- CONCLUSION -->
+  <section id="conclusion" class="container">
+    <div class="section-title">Conclusion</div>
+    <div class="conclusion">
+      Throughout my academic journey, I’ve taken on multifaceted projects 
+      blending mechanical design, embedded systems, and control theory. 
+      Analyzing my program outcomes helps me identify strengths and address 
+      gaps. By engaging in life-long learning—enrolling in advanced certifications, 
+      collaborating on innovative research, and continuously exploring industry best 
+      practices—I am determined to become a highly competent mechatronic 
+      engineer contributing meaningful solutions to the ever-evolving global market.
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="container">
+    <div class="section-title">Contact</div>
+    <p>
+      You can reach me using the following contact information or via my 
+      LinkedIn profile for potential collaboration, internship, or full-time 
+      employment opportunities.
+    </p>
+    <div class="contact-info">
+      <div><i class="fas fa-map-marker-alt"></i> Seri Kembangan, Selangor, Malaysia</div>
+      <div><i class="fas fa-phone"></i> +60 11-2168-3837</div>
+      <div>
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:eaglebadr7@gmail.com" style="color:#333; text-decoration:none;">
+          eaglebadr7@gmail.com
+        </a>
+      </div>
+      <div>
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/badr-khaled-al-sabri-38b508208" target="_blank"
+           style="color:#333; text-decoration:none;">
+          linkedin.com/in/badr-khaled-al-sabri-38b508208
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 - E-Portfolio of Badr K. Al-Sabri. All rights reserved.
+  </footer>
+</body>
+</html>
